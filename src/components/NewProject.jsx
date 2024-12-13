@@ -1,7 +1,7 @@
 import Input from "./Input.jsx";
 import { useRef } from "react";
 import Modal from "./Modal.jsx";
-const NewProject = ({ onAdd }) => {
+const NewProject = ({ onAdd, onCancel }) => {
   const modal = useRef();
 
   const titleRef = useRef();
@@ -56,7 +56,10 @@ const NewProject = ({ onAdd }) => {
             </button>
           </li>
           <li>
-            <button className="bg-red-800 text-white px-5 py-2 rounded-md hover:bg-red-500 hover:text-white">
+            <button
+              onClick={onCancel}
+              className="bg-red-800 text-white px-5 py-2 rounded-md hover:bg-red-500 hover:text-white"
+            >
               Cancel
             </button>
           </li>
